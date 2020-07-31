@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import UserLayouttRoute from "./Layouts/UserLayout";
+import DashboardLayoutRoute from "./Layouts/DashboardLayout";
 
-function App() {
+import UserPage from "./Pages/UserPage";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <Redirect to="/layout1" />
+      </Route>
+      <UserLayouttRoute path="/layout1" Component={UserPage} />
+      <DashboardLayoutRoute path="/layout2" Component={UserPage} />
+    </Switch>
   );
-}
+};
 
 export default App;
