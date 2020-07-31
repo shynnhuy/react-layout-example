@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.scss";
 import { Switch, Route, Redirect } from "react-router-dom";
 import UserLayouttRoute from "./Layouts/UserLayout";
 import DashboardLayoutRoute from "./Layouts/DashboardLayout";

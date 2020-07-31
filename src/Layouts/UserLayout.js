@@ -1,10 +1,11 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import NavHeader from "../Components/NavHeader";
 
 const UserLayout = ({ children }) => {
   return (
     <div>
-      <p>This is Navbar for user</p>
+      <NavHeader />
       {children}
     </div>
   );
